@@ -1,0 +1,315 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Prism Studios</title>
+<meta name="description" content="Prism Studios builds systems that let a company move fast.">
+<link rel="canonical" href="https://prismstudios.ai/">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<meta name="theme-color" content="#FFFFFF">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://prismstudios.ai/">
+<meta property="og:title" content="Prism Studios">
+<meta property="og:description" content="Prism Studios builds systems that let a company move fast.">
+<meta property="og:image" content="https://prismstudios.ai/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Prism Studios">
+<meta name="twitter:description" content="Prism Studios builds systems that let a company move fast.">
+<meta name="twitter:image" content="https://prismstudios.ai/og.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<style>html{-webkit-text-size-adjust:100%}body{margin:0}[hidden]{display:none!important}</style>
+</head>
+<body>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500&family=JetBrains+Mono:wght@400&family=Newsreader:ital,opsz,wght@0,6..72,400;1,6..72,400&display=swap">
+<style>
+/* Layout: Monograph. One white sheet, gutter-to-gutter hairlines, one serif statement per
+   screen, tiny uppercase labels hanging under the rules. A deliberate single look: white only.
+   Colour appears in three places only: the edge of the name, light leaving the glass, the signature band. */
+:root{
+  color-scheme:light;
+  --paper:#FFFFFF; --ink:#0B0B0C; --quiet:rgba(11,11,12,.42);
+  --in-a:#B5523F; --in-b:#4B8660; --in-c:#3F62B5;
+  --warm:rgba(236,88,32,.9); --cool:rgba(32,100,240,.9);
+  --serif:"Newsreader",Georgia,"Times New Roman",serif;
+  --sans:"Instrument Sans",ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif;
+  --mono:"JetBrains Mono",ui-monospace,SFMono-Regular,Menlo,monospace;
+  --g:max(20px,2.2vw);
+}
+body{background:var(--paper);color:var(--ink);font-family:var(--sans);font-size:clamp(14px,1.02vw,17px);line-height:1.5}
+.page{padding-left:max(var(--g),env(safe-area-inset-left,0px));padding-right:max(var(--g),env(safe-area-inset-right,0px));padding-block:0 36px}
+.rule{border-top:.75px solid var(--ink)}
+.lab{font-family:var(--mono);font-size:clamp(9px,.68vw,11px);letter-spacing:.09em;text-transform:uppercase;color:var(--quiet)}
+.serif{font-family:var(--serif);font-weight:400;letter-spacing:-.012em;text-wrap:balance;margin:0}
+
+header{display:flex;justify-content:space-between;align-items:center;gap:16px;padding-block:18px 12px;flex-wrap:wrap}
+.brand{display:flex;align-items:center;gap:10px}
+.brand svg{width:clamp(22px,1.7vw,28px);height:auto;display:block}
+.brand .wm{font-weight:500;font-size:clamp(17px,1.3vw,21px);letter-spacing:-.012em;text-shadow:-.7px 0 0 var(--warm),.7px 0 0 var(--cool)}
+nav{display:flex;gap:clamp(14px,2vw,34px);flex-wrap:wrap}
+.clock{display:flex;gap:22px;flex-wrap:wrap;padding-top:8px}
+
+.hero{min-height:calc(100svh - 96px);display:flex;flex-direction:column;justify-content:center;padding-block:clamp(64px,10vw,160px)}
+.hero h1{font-size:clamp(30px,5.3vw,92px);line-height:1.05;max-width:17em}
+.fr{text-shadow:calc(-1 * max(.6px,.011em)) 0 0 var(--warm),max(.6px,.011em) 0 0 var(--cool)}
+.hero svg{display:block;width:100%;height:auto;margin-top:clamp(36px,6vw,96px)}
+
+section{padding-block:14px clamp(110px,17vw,300px)}
+.stmt{min-height:92svh;display:flex;flex-direction:column}
+.stmt .say{margin-block:auto}
+.head{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;padding-top:8px}
+.say{font-size:clamp(26px,4.1vw,70px);line-height:1.08;max-width:19em;margin-top:clamp(48px,8vw,140px)}
+.h2{font-size:clamp(26px,3.6vw,60px);line-height:1.06;margin-top:clamp(64px,10vw,170px)}
+.body{max-width:62ch;margin-top:20px}
+.h2+.body{margin-top:3px}
+.fig{overflow-x:auto;margin-top:clamp(28px,4vw,64px)}
+.fig svg{display:block;width:100%;min-width:700px;height:auto}
+.fig text{font-family:var(--mono);font-size:15px;letter-spacing:.09em;fill:rgba(11,11,12,.55)}
+.fig .d text{font-family:var(--sans);font-size:9px;letter-spacing:.01em;fill:rgba(11,11,12,.6)}
+.fig .d{opacity:0}
+.fig.on .d{opacity:1}
+.fig.on .mv{transform:translateY(-46px)}
+.tabs{position:relative;padding-bottom:1.9em;display:flex;flex-wrap:wrap;align-items:baseline;gap:4px clamp(16px,2.2vw,36px);margin-top:clamp(28px,4vw,64px)}
+.tabs .ind{position:absolute;white-space:nowrap;color:var(--quiet);transition:opacity .3s}
+.tabs+.fig{margin-top:clamp(14px,2vw,28px)}
+.tabs button{font:inherit;letter-spacing:inherit;text-transform:inherit;color:var(--quiet);background:none;border:0;border-bottom:1px solid transparent;padding:10px 0 6px;cursor:pointer}
+.tabs button:hover{color:var(--ink)}
+.tabs button[aria-pressed="true"]{color:var(--ink);border-bottom-color:var(--ink)}
+.tabs button:focus-visible{outline:1.5px solid var(--ink);outline-offset:3px}
+.cols{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:28px clamp(24px,4vw,72px);margin-top:clamp(28px,4vw,56px)}
+.cols>div{min-width:0}
+.cols h3{font-family:var(--mono);font-weight:400;font-size:clamp(9px,.68vw,11px);letter-spacing:.09em;text-transform:uppercase;margin:0 0 10px;display:flex;align-items:center;gap:8px}
+.cols h3 i{width:18px;height:1.5px;display:inline-block}
+.cols p{margin:0;max-width:40ch}
+.rows{margin-top:clamp(36px,5vw,84px)}
+.row{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.5fr);gap:12px clamp(24px,4vw,72px);padding-block:22px clamp(28px,3.4vw,54px);border-top:.75px solid var(--ink)}
+.row .w{font-family:var(--serif);font-size:clamp(26px,3.2vw,52px);line-height:1;letter-spacing:-.012em}
+.row p{margin:6px 0 0;max-width:54ch}
+@media (max-width:640px){.row{grid-template-columns:1fr}}
+/* Studio: one quiet line and the fields, tucked just above the band. Ink at 62%: lighter than
+   body text, darker than the 42% labels. Design icon = golden rectangle with its spiral. */
+.studio{padding-block:clamp(110px,17vw,300px) 0}
+.team{margin:0;font-size:clamp(11px,.78vw,13px);line-height:1.4;color:rgba(11,11,12,.62)}
+.fields{display:flex;flex-wrap:wrap;justify-content:flex-start;gap:12px clamp(18px,1.8vw,28px);margin-top:12px}
+.fields>div{display:flex;flex-direction:column;gap:6px;min-width:0}
+.fields .lab{color:rgba(11,11,12,.62)}
+.fields svg{width:clamp(18px,1.3vw,22px);height:auto;display:block;fill:none;stroke:currentColor;stroke-width:1.3;color:rgba(11,11,12,.62)}
+.band{padding-block:16px 10px}
+.band svg{display:block;width:100%;height:clamp(14px,1.6vw,26px)}
+.band .lab{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;padding-top:8px}
+
+footer .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:24px;padding-block:16px 8px}
+footer .grid>div{min-width:0}
+footer .big{font-family:var(--mono);font-size:clamp(15px,1.5vw,24px);line-height:1.35}
+footer .mail{font-family:var(--mono);font-size:clamp(11px,.8vw,13px);letter-spacing:.06em;color:var(--ink);user-select:all;overflow-wrap:anywhere}
+a{color:inherit;text-decoration:none}
+a:focus-visible{outline:1.5px solid var(--ink);outline-offset:3px}
+
+/* Motion: light moves through the glass in the hero; work moves through the figure, without pause. */
+@media (prefers-reduced-motion:no-preference){
+  .fig .d{transition:opacity .35s ease}
+  .fig .mv{transition:transform .35s ease}
+}
+</style>
+
+<div class="page">
+
+<header>
+  <div class="brand">
+    <svg viewBox="0 0 56 40" aria-hidden="true"><rect x="24" y="3" width="8" height="34" fill="none" stroke="#0B0B0C" stroke-width="1.6"/><path d="M0 15.99H24L32 24.01H56" fill="none" stroke="#0B0B0C" stroke-width="1.6"/><g id="pm-l" fill="none" stroke-width="1.8"></g></svg>
+    <div class="wm">Prism Studios</div>
+  </div>
+</header>
+<div class="rule"></div>
+<div class="clock lab"><span><span id="t-tor">14:07</span> Toronto</span><span><span id="t-la">11:07</span> Los Angeles</span></div>
+
+<div class="hero">
+  <h1 class="serif"><span class="fr">Prism Studios</span> builds <span class="fr">systems</span> that let a company <span class="fr">move fast</span>.</h1>
+  <svg viewBox="0 0 1000 120" role="img" aria-label="A line of light passes through a slim pane of glass and leaves shifted, its spectrum appearing from the middle of the glass">
+    <rect x="640" y="5" width="26" height="110" fill="none" stroke="#0B0B0C" stroke-width="1"/>
+    <path d="M0 47.02H640L666 72.98H1000" fill="none" stroke="#0B0B0C" stroke-width="1"/>
+    <g id="hero-l" fill="none" stroke-width="1.6"></g>
+  </svg>
+</div>
+
+<section class="stmt">
+  <div class="rule"></div>
+  <p class="serif say">To do that, a company has to <span class="fr">see itself</span>, its market and its competitors at once, as they change.</p>
+</section>
+
+<section id="method">
+  <div class="rule"></div>
+  <div class="head lab"><span>Method</span><span>Fig. 1</span></div>
+  <h2 class="serif h2">Signal becomes work.</h2>
+  <p class="body">Thousands of times over, in every function, without pause.</p>
+  <div class="tabs lab" id="tabs"><button type="button" data-f="marketing" aria-pressed="false">Marketing</button><button type="button" data-f="sales" aria-pressed="false">Sales</button><button type="button" data-f="operations" aria-pressed="false">Operations</button><button type="button" data-f="finance" aria-pressed="false">Finance</button><span class="ind" id="ind" aria-live="polite"></span></div>
+  <div class="fig" id="fig">
+    <svg viewBox="0 0 1000 400" role="img" aria-label="House record, market and competitor lines enter a glass cube and leave as one line: continuous insight and recursive action">
+      <g fill="none" stroke-width="1.2">
+        <g stroke="#B5523F"><line x1="20" y1="182" x2="430" y2="182"/><line x1="20" y1="200" x2="430" y2="200"/><line x1="20" y1="218" x2="430" y2="218"/></g>
+        <g stroke="#4B8660"><line x1="482" y1="16" x2="482" y2="130"/><line x1="500" y1="16" x2="500" y2="130"/><line x1="518" y1="16" x2="518" y2="130"/></g>
+        <g stroke="#3F62B5"><line x1="482" y1="384" x2="482" y2="270"/><line x1="500" y1="384" x2="500" y2="270"/><line x1="518" y1="384" x2="518" y2="270"/></g>
+        <g stroke="#0B0B0C"><rect x="430" y="130" width="140" height="140"/><line x1="430" y1="130" x2="570" y2="270" stroke-width=".75"/><line x1="570" y1="130" x2="430" y2="270" stroke-width=".75"/></g>
+        <line x1="570" y1="200" x2="1000" y2="200" stroke="#0B0B0C" stroke-width="2.6"/>
+      </g>
+      <text x="20" y="166">HOUSE RECORD</text><text x="536" y="30">MARKET</text><text class="mv" x="536" y="382">COMPETITORS</text><text class="mv" x="640" y="184">CONTINUOUS INSIGHT</text><text x="640" y="227">RECURSIVE ACTION</text>
+      <g class="d" aria-live="polite"><text x="20" y="244" data-k="h0"></text><text x="20" y="264" data-k="h1"></text><text x="536" y="54" data-k="m0"></text><text x="536" y="74" data-k="m1"></text><text x="536" y="360" data-k="c0"></text><text x="536" y="380" data-k="c1"></text><text x="640" y="162" data-k="i0"></text><text x="640" y="182" data-k="i1"></text><text x="640" y="251" data-k="a0"></text><text x="640" y="271" data-k="a1"></text></g>
+    </svg>
+  </div>
+  <div class="cols">
+    <div><h3><i style="background:var(--in-a)"></i>House record</h3><p>Everything the company already holds: orders, ledgers, stock, customers, conversations. Reconciled until the numbers agree.</p></div>
+    <div><h3><i style="background:var(--in-b)"></i>Market</h3><p>Demand, pricing and the movement of the industry, read as it happens and measured against the company's own figures.</p></div>
+    <div><h3><i style="background:var(--in-c)"></i>Competitors</h3><p>What rivals launch, charge and say. Under constant watch, so a change is seen when it happens and answered while it still matters.</p></div>
+    <div><h3><i style="background:var(--ink);height:2.6px"></i>Insight and action</h3><p>Decisions taken and carried through, across marketing, sales, operations and finance. Each one recorded, each one actionable.</p></div>
+  </div>
+</section>
+
+<section id="studio" class="studio">
+  <p class="team">The Prism Studios team has worked at depth across key fields, and more. Its systems are in production today inside operating companies.</p>
+  <div class="fields">
+    <div><div class="lab">Energy</div><svg viewBox="0 0 40 40" aria-hidden="true"><ellipse cx="20" cy="20" rx="16" ry="6"/><ellipse cx="20" cy="20" rx="16" ry="6" transform="rotate(60 20 20)"/><ellipse cx="20" cy="20" rx="16" ry="6" transform="rotate(120 20 20)"/><circle cx="20" cy="20" r="1.6" fill="currentColor" stroke="none"/></svg></div>
+    <div><div class="lab">Finance</div><svg viewBox="0 0 40 40" aria-hidden="true"><path d="M5 15L20 6L35 15H5M10 15V31M20 15V31M30 15V31M5 34H35"/></svg></div>
+    <div><div class="lab">Security</div><svg viewBox="0 0 40 40" aria-hidden="true"><path d="M20 5L33 10V20C33 28 27 33 20 36C13 33 7 28 7 20V10Z"/><path d="M20 14V26"/></svg></div>
+    <div><div class="lab">Design</div><svg viewBox="0 0 40 40" aria-hidden="true"><rect x="4" y="10.11" width="32" height="19.78"/><path d="M23.78 10.11V29.89M23.78 22.33H36M28.44 22.33V29.89"/><path d="M4 29.89A19.78 19.78 0 0 1 23.78 10.11A12.22 12.22 0 0 1 36 22.33A7.56 7.56 0 0 1 28.44 29.89"/></svg></div>
+    <div><div class="lab">Consumer</div><svg viewBox="0 0 40 40" aria-hidden="true"><rect x="8" y="14" width="24" height="20"/><path d="M14 14V11A6 6 0 0 1 26 11V14"/></svg></div>
+    <div><div class="lab">Software</div><svg viewBox="0 0 40 40" aria-hidden="true"><rect x="6" y="8" width="28" height="24"/><path d="M6 15H34M12 21L16 24L12 27M20 27H27"/></svg></div>
+  </div>
+</section>
+
+<div class="band">
+  <svg viewBox="0 0 1000 20" preserveAspectRatio="none" role="img" aria-label="A pale spectrum crossed by the hydrogen lines of the star Vega">
+    <defs><linearGradient id="gs" x1="0" x2="1"><stop offset="0" stop-color="#D5C8DE"/><stop offset=".3" stop-color="#C6D5E6"/><stop offset=".55" stop-color="#CFE0CF"/><stop offset=".75" stop-color="#EAE3C2"/><stop offset="1" stop-color="#E8CCC1"/></linearGradient></defs>
+    <rect width="1000" height="20" fill="url(#gs)"/>
+    <g stroke="#2E3138" stroke-opacity=".38"><line x1="41" y1="0" x2="41" y2="20" stroke-width="1.0"/><line x1="57" y1="0" x2="57" y2="20" stroke-width="1.4"/><line x1="82" y1="0" x2="82" y2="20" stroke-width="1.9"/><line x1="122" y1="0" x2="122" y2="20" stroke-width="2.4"/><line x1="194" y1="0" x2="194" y2="20" stroke-width="2.8"/><line x1="352" y1="0" x2="352" y2="20" stroke-width="2.8"/><line x1="868" y1="0" x2="868" y2="20" stroke-width="2.4"/></g>
+  </svg>
+</div>
+
+<footer id="contact">
+  <div class="rule"></div>
+  <div class="grid">
+    <div class="big"><span id="f-tor">14:07</span> Toronto<br><span id="f-la">11:07</span> Los Angeles</div>
+    <div><div class="lab" style="margin-bottom:8px">Enquiries</div><div class="mail">input@prismstudios.ai</div></div>
+  </div>
+</footer>
+
+</div>
+<script>
+(function(){
+  function t(z){try{return new Intl.DateTimeFormat('en-GB',{hour:'2-digit',minute:'2-digit',hour12:false,timeZone:z}).format(new Date())}catch(e){return null}}
+  function tick(){var a=t('America/Toronto'),b=t('America/Los_Angeles');
+    if(a){document.getElementById('t-tor').textContent=a;document.getElementById('f-tor').textContent=a}
+    if(b){document.getElementById('t-la').textContent=b;document.getElementById('f-la').textContent=b}}
+  tick();setInterval(tick,30000);
+  /* Figure copy: per function, set 0 (general) then industry examples, typed one character
+     at a time (inputs together, then insight, then action), held 4.5 s, faded, next set. */
+var COPY={
+marketing:[
+{ind:"",h:["Every order, margin and customer,","and every ad ever run."],m:["What buyers search for, and what it costs","to reach them, as both move."],c:["Every rival ad, offer and price,","from launch to withdrawal."],i:["Where demand is rising, rivals are absent","and your margin is highest."],a:["Ads written, launched and measured there.","Each result shapes the next."]},
+{ind:"Consumer",h:["Every order, repeat rate and margin,","by product and by channel."],m:["What shoppers search for, and what","creators are showing them."],c:["Every rival launch, discount","and sold-out notice."],i:["The product shoppers want that a rival","just ran out of, and you have in stock."],a:["Ads and pages made for it, launched","and measured. Results set the next round."]},
+{ind:"Software",h:["Every trial, activation, renewal","and support thread."],m:["What buyers ask for in reviews,","forums and job postings."],c:["Every rival release, price change","and outage."],i:["The feature buyers now ask for that","a rival dropped and you already ship."],a:["Pages, ads and emails written for it.","Each reply sharpens the next."]},
+{ind:"Healthcare",h:["Every referral, booking, no-show","and service line margin."],m:["What patients search for locally,","and who refers where."],c:["Rival clinics' wait times, services","and opening hours."],i:["The service with rising local demand,","long rival waits and open capacity here."],a:["Listings, pages and referrer notes","updated for it. Then measured again."]},
+{ind:"Financial services",h:["Every account opened, funded,","dormant and closed."],m:["Rate moves, search demand","and what regulators publish."],c:["Every rival rate, fee","and offer, as posted."],i:["The segment a rival just repriced","that you can serve at a better margin."],a:["Offers written, approved and placed.","Uptake sets the next offer."]},
+{ind:"Design",h:["Every enquiry, proposal, win and loss,","and what each project earned."],m:["Who is building, rebranding, raising","or hiring a design lead."],c:["What rival studios publish, win","and charge."],i:["The sector commissioning more work,","where your past projects won and paid."],a:["Work shown to those buyers, introductions","requested. Replies shape the next."]}
+],
+sales:[
+{ind:"",h:["Every account, order, quote","and conversation."],m:["Who is opening, hiring, raising money","or putting work out to tender."],c:["Where rivals are stocked, what they quote,","and where they are slipping."],i:["The accounts that are growing, underserved","by a rival, and overdue for a call."],a:["The approach written, the follow-up kept,","the record updated. Then the next account."]},
+{ind:"Software",h:["Every account, seat, usage log","and renewal date."],m:["Who is hiring, raising money","or replacing a system."],c:["Where rivals are installed, what they","charge, and where users complain."],i:["The account outgrowing a rival's product","while its own use of yours climbs."],a:["The case written, the meeting asked for,","the record updated. Then the next."]},
+{ind:"Energy",h:["Every contract, meter, load profile","and renewal date."],m:["Wholesale prices, new connections","and sites breaking ground."],c:["Rival tariffs, contract terms","and expiry dates, where known."],i:["The sites whose contracts end soon, as","prices fall below what a rival locked in."],a:["The offer priced, sent and followed up.","Then repriced as the market moves."]},
+{ind:"Security",h:["Every client, asset covered,","incident and renewal."],m:["New disclosures, breaches reported","and rules coming into force."],c:["What rivals cover, what they missed,","and what they charge."],i:["The prospects exposed to a new flaw","that their current vendor missed."],a:["The briefing written and sent.","Replies routed. Then the next flaw."]},
+{ind:"Professional services",h:["Every client, matter, fee","and relationship."],m:["Deals announced, disputes filed,","leadership changes."],c:["Which firms advise whom,","and who has just moved."],i:["The client entering a deal in a field","where their usual firm just lost its lead."],a:["The partner briefed, the note drafted,","the follow-up kept. Then the next."]},
+{ind:"Manufacturing",h:["Every quote, order, lead time","and delivery record."],m:["Who is tooling up, tendering","or changing supplier."],c:["Rival lead times, prices","and late deliveries."],i:["The buyers a rival is delivering late to,","for parts you have capacity to make."],a:["The quote prepared, sent and chased.","Capacity updated. Then the next buyer."]}
+],
+operations:[
+{ind:"",h:["Stock, open orders, lead times","and every service ticket."],m:["Demand by channel and region.","Freight and input costs."],c:["What rivals have in stock, what they","promise, and when they run out."],i:["The product about to run short, just as","a rival runs out and demand climbs."],a:["The order raised, the stock moved,","the supplier chased. Then checked again."]},
+{ind:"Energy",h:["Every asset, sensor reading,","outage and work order."],m:["Weather, demand forecasts","and wholesale prices by the hour."],c:["Rival plant outages","and capacity coming on line."],i:["The unit due for maintenance just when","prices will peak and rivals are offline."],a:["Work rescheduled, crews and parts booked.","Then checked against the forecast."]},
+{ind:"Manufacturing",h:["Every machine, shift, yield figure","and purchase order."],m:["Material prices, supplier lead times","and customer forecasts."],c:["Rival capacity, shortages","and price moves."],i:["The material about to get scarce, for","an order rivals will not be able to fill."],a:["Stock bought ahead, the line rescheduled,","the customer told. Then checked again."]},
+{ind:"Logistics",h:["Every shipment, route, vehicle","and delivery time."],m:["Port delays, fuel prices, weather","and volumes by lane."],c:["Rival rates, transit times","and service failures."],i:["The lane where demand is building","and a rival has just cut its service."],a:["Capacity moved, rates set, customers","told. Then measured and moved again."]},
+{ind:"Consumer",h:["Stock by warehouse, orders, returns","and supplier lead times."],m:["Demand by channel and region,","freight and input costs."],c:["What rivals have in stock,","and when they sell out."],i:["The product about to run short, just as","a rival sells out and demand climbs."],a:["The order raised, the stock moved,","the supplier chased. Then checked again."]},
+{ind:"Healthcare",h:["Every appointment, room, clinician hour","and supply order."],m:["Local demand by service,","seasonal illness, staffing costs."],c:["Rival clinics' wait times","and closures."],i:["The point demand will exceed capacity,","as a nearby clinic cuts its hours."],a:["Rosters adjusted, supplies ordered,","slots opened. Then checked again."]}
+],
+finance:[
+{ind:"",h:["The ledger, the bank, payables,","receivables and payroll."],m:["Rates, currencies, input prices","and customers' credit."],c:["Their prices, their terms","and their published accounts."],i:["The product line losing margin as costs","rise while rivals hold their price."],a:["Books reconciled, variances explained,","collections chased. The close is always ready."]},
+{ind:"Financial services",h:["Every ledger, position, exposure","and settlement."],m:["Rates, currencies, liquidity","and counterparty credit."],c:["Rival pricing, funding costs","and published results."],i:["The exposure growing where funding","costs rise and rivals are pulling back."],a:["Positions reconciled, limits checked,","breaks resolved. Reports stay current."]},
+{ind:"Professional services",h:["Every hour recorded, invoice,","write-off and payment."],m:["Client sector health, rates","and payment behaviour."],c:["Rival fee levels","and published results."],i:["The client paying later each time,","in a sector where others are failing."],a:["Work in progress billed, debts chased,","partners told. Then reviewed again."]},
+{ind:"Logistics",h:["Every invoice, fuel card, lease","and cost per delivery."],m:["Fuel, currencies","and customers' credit."],c:["Rival rates and surcharges,","as published."],i:["The lane losing margin as fuel rises","and rivals hold their surcharge."],a:["Surcharges repriced, invoices issued,","collections chased. Then run again."]},
+{ind:"Security",h:["Every contract, renewal, cost to serve","and payment."],m:["Insurance requirements, budgets","and rules by sector."],c:["Rival pricing","and contract terms."],i:["The contracts priced below cost to","serve, where rivals already charge more."],a:["Renewals repriced, forecasts updated,","variances explained. Then run again."]},
+{ind:"Design",h:["Every project budget, hour,","invoice and payment."],m:["Client sector health","and going day rates."],c:["What rival studios charge,","where known."],i:["The kind of project that runs over, at","a fee below what rival studios charge."],a:["Budgets flagged, invoices sent, fees","revised for the next proposal."]}
+]};
+
+  var RM=window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var fig=document.getElementById('fig'),btns=document.querySelectorAll('#tabs button'),indEl=document.getElementById('ind'),cur=null;
+  var TX={};fig.querySelectorAll('[data-k]').forEach(function(t){TX[t.dataset.k]=t});
+  var CH=26,EOL=200,GAP=260,HOLD=4500,CLR=320,IND=34,setI=0,st=0,sched=null,raf=0,last=0;
+  function dur(l){return l[0].length*CH+EOL+l[1].length*CH}
+  function plan(set){var s={set:set,b:{}},end=0;
+    ['h','m','c'].forEach(function(k){var d=dur(set[k]);s.b[k]=0;end=Math.max(end,d)});
+    var t0=end+GAP;['i','a'].forEach(function(k){s.b[k]=t0;t0+=dur(set[k])+GAP});
+    s.done=t0-GAP;s.clr=s.done+HOLD;s.next=s.clr+CLR;return s}
+  function part(str,ms){return ms<0?'':str.slice(0,Math.min(str.length,Math.floor(ms/CH)+1))}
+  function paint(full){var set=sched.set,t=full?1e9:st,op=(!full&&t>sched.clr)?Math.max(0,1-(t-sched.clr)/CLR):1;
+    'hmcia'.split('').forEach(function(k){var l=set[k],t0=t-sched.b[k];
+      TX[k+'0'].textContent=part(l[0],t0);TX[k+'1'].textContent=part(l[1],t0-l[0].length*CH-EOL);
+      TX[k+'0'].style.opacity=TX[k+'1'].style.opacity=op});
+    indEl.textContent=full?'':(set.ind||'').slice(0,Math.max(0,Math.floor(t/IND)));indEl.style.opacity=op}
+  /* Copy matches the tab labels' on-screen size whatever the figure's width; the industry
+     name sits directly under the pressed tab. */
+  var svgEl=fig.querySelector('svg');
+  function fit(){var w=svgEl.getBoundingClientRect().width;if(!w)return;var px=parseFloat(getComputedStyle(btns[0]).fontSize),u=px*1000/w;
+    Object.keys(TX).forEach(function(k){TX[k].style.fontSize=u.toFixed(2)+'px'});
+    'hmcia'.split('').forEach(function(k){TX[k+'1'].setAttribute('y',(+TX[k+'0'].getAttribute('y')+u*1.75).toFixed(1))});
+    var b=document.querySelector('#tabs button[aria-pressed="true"]');if(b){indEl.style.left=b.offsetLeft+'px';indEl.style.top=(b.offsetTop+b.offsetHeight+6)+'px'}}
+  fit();window.addEventListener('resize',fit);if(document.fonts)document.fonts.ready.then(fit);
+  function frame(ts){raf=0;if(!cur)return;var dt=last?Math.min(50,ts-last):0;last=ts;st+=dt;
+    if(st>=sched.next){st-=sched.next;setI=(setI+1)%COPY[cur].length;sched=plan(COPY[cur][setI])}
+    paint(false);raf=requestAnimationFrame(frame)}
+  function show(f){cur=(f===cur)?null:f;
+    btns.forEach(function(b){b.setAttribute('aria-pressed',String(b.dataset.f===cur))});
+    if(raf){cancelAnimationFrame(raf);raf=0}
+    Object.keys(TX).forEach(function(k){TX[k].textContent=''});indEl.textContent='';
+    fig.classList.toggle('on',!!cur);fit();
+    if(!cur)return;
+    setI=0;st=-350;last=0;sched=plan(COPY[cur][0]);
+    if(RM){paint(true);return}
+    raf=requestAnimationFrame(frame)}
+  btns.forEach(function(b){b.addEventListener('click',function(){show(b.dataset.f)})});
+  /* Slow, eased scroll for in-page links (1.6 s); instant under reduced motion. */
+  document.querySelectorAll('a[href^="#"]').forEach(function(a){a.addEventListener('click',function(e){
+    var el=document.getElementById(a.getAttribute('href').slice(1));if(!el)return;e.preventDefault();
+    var y0=window.scrollY,y1=el.getBoundingClientRect().top+y0,D=1600,t0=null;
+    if(RM){window.scrollTo(0,y1);return}
+    function ease(x){return x<.5?4*x*x*x:1-Math.pow(-2*x+2,3)/2}
+    function step(ts){if(t0===null)t0=ts;var k=Math.min(1,(ts-t0)/D);window.scrollTo(0,y0+(y1-y0)*ease(k));if(k<1)requestAnimationFrame(step)}
+    requestAnimationFrame(step)})});
+  /* Light pass, same rules as signature/make_mark_gif.py: at rest the line is black. A
+     whitish-yellow beam Y = S/phi long enters; from the middle of the glass it leaves as six
+     spectrum blocks (violet leading, red trailing), S long, travelling phi times faster.
+     Header mark: pane 8 x 34, line at y 15.99 in, 24.01 out. Hero: pane 26 x 110 (same
+     proportion), line at y 47.02 in, 72.98 out (1 : phi of the pane height), so both cross at 45 degrees. */
+  function lightPass(g,P,S,SPEED,CYCLE,DELAY){
+    if(!g||RM)return;
+    var PHI=(1+Math.sqrt(5))/2,SEG=[],L=0;
+    for(var i=0;i<3;i++){SEG.push(Math.hypot(P[i+1][0]-P[i][0],P[i+1][1]-P[i][1]));L+=SEG[i]}
+    var MID=SEG[0]+SEG[1]/2,Y=S/PHI,BEAM='#E4DDC4',
+        BANDS=['#D2502E','#E0862C','#D9B02E','#3FA066','#3760D0','#6A4BC4'];
+    function pt(s){s=Math.max(0,Math.min(L,s));for(var i=0;i<3;i++){if(s<=SEG[i]||i==2){var f=s/SEG[i];
+      return [P[i][0]+(P[i+1][0]-P[i][0])*f,P[i][1]+(P[i+1][1]-P[i][1])*f]}s-=SEG[i]}}
+    function sub(a,b){a=Math.max(0,a);b=Math.min(L,b);if(b<=a)return null;var q=[pt(a)],acc=0;
+      for(var i=0;i<2;i++){acc+=SEG[i];if(a<acc&&acc<b)q.push(P[i+1])}q.push(pt(b));
+      return 'M'+q.map(function(p){return p[0].toFixed(2)+' '+p[1].toFixed(2)}).join('L')}
+    var END=MID+Y+(L-MID)/PHI,t0=null;
+    function frame(now){if(t0===null)t0=now-CYCLE+DELAY;var ms=(now-t0)%CYCLE,t=ms/1000*SPEED,h='';
+      if(t<END){var parts=[];if(t-Y<MID)parts.push([t-Y,Math.min(t,MID),BEAM]);
+        if(t>MID){var dt=t-MID,sh=MID+PHI*dt,st=dt<Y?MID:MID+PHI*(dt-Y),bw=S/6;
+          for(var k=0;k<6;k++)parts.push([Math.max(sh-(k+1)*bw,st),sh-k*bw,BANDS[5-k]])}
+        parts.forEach(function(p){var d=p[1]>p[0]&&sub(p[0],p[1]);if(d)h+='<path d="'+d+'" stroke="'+p[2]+'"/>'})}
+      if(g._h!==h){g.innerHTML=h;g._h=h}requestAnimationFrame(frame)}
+    requestAnimationFrame(frame)}
+  lightPass(document.getElementById('pm-l'),[[0,15.99],[24,15.99],[32,24.01],[56,24.01]],16.18,24,7000,1200);
+  lightPass(document.getElementById('hero-l'),[[0,47.02],[640,47.02],[666,72.98],[1000,72.98]],161.8,200,11000,1800);
+})();
+</script>
+</body>
+</html>
